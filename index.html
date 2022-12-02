@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Bill Splitter</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="currency">
+        <button
+          class="btn"
+          id="btn"
+          value="usd"
+          onclick="chooseLangAndCurrency()"
+        >
+          US: USD
+        </button>
+        <button
+          class="btn"
+          id="btn"
+          value="pln"
+          onclick="chooseLangAndCurrency()"
+        >
+          PL: PLN
+        </button>
+        <button
+          class="btn"
+          id="btn"
+          value="eur"
+          onclick="chooseLangAndCurrency()"
+        >
+          DE: EUR
+        </button>
+      </div>
+      <div class="container" id="top-container">
+        <div class="title" id="bill-total-description">Bill total</div>
+        <div class="input-container">
+          <span id="current-currency-sign">$: </span>
+          <input
+            onkeyup="calculateBill()"
+            type="text"
+            id="bill-total-input"
+            placeholder="0.00"
+          />
+        </div>
+      </div>
+      <div class="container">
+        <div class="title" id="tip-description">Tip</div>
+        <div class="input-container">
+          <span class="percent-sign">%</span>
+          <input
+            onkeyup="calculateBill()"
+            type="text"
+            id="tip-input"
+            placeholder="10"
+          />
+        </div>
+      </div>
+      <div class="container" id="bottom">
+        <div class="splitContainer">
+          <div class="title" id="amount-of-people-description">
+            Amount of
+            <div class="title">People &darr;</div>
+          </div>
+
+          <div class="controls">
+            <span class="button-container">
+              <button class="split-button" onclick="increasePeople()">+</button>
+            </span>
+            <span class="split-amount" id="number-of-people">1</span>
+            <span class="button-container">
+              <button class="split-button" onclick="decreasePeople()">-</button>
+            </span>
+          </div>
+        </div>
+        <div class="total-container">
+          <div class="title" id="final-total-price">
+            Total per Person
+            <div id="current-currency-total">&#8600;</div>
+          </div>
+          <div class="total" id="per-person-total">0.00</div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+* {
+  font-family: "M PLUS Rounded 1c", Avenir Next, Helvetica, sans-serif;
+  color: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #8990ec;
+}
+
+.wrapper {
+  height: 40rem;
+  width: 40rem;
+  color: white;
+  background: #272639;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  margin: 8rem auto;
+}
+
+.currency {
+  display: flex;
+  justify-content: space-between;
+}
+
+#top-container {
+  margin-top: 4rem;
+}
+
+.container {
+  margin-top: 1.8rem;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.input-container {
+  background: #353959;
+  border-radius: 1.8rem;
+  padding: 0 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+#bill-total-input,
+#tip-input {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  outline: none;
+  padding: none;
+}
+
+.button-container {
+  padding: 1.6rem;
+  background: #8990ec;
+
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #353959;
+  border-radius: 50%;
+  position: relative;
+}
+
+.button-container:hover {
+  background-color: #696fb8;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.split-button {
+  background: none;
+  border: none;
+}
+
+.split-button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.7rem 1.2rem;
+  display: grid;
+  place-items: center;
+  color: #353959;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -51%);
+}
+
+.split-amount {
+  font-size: 2rem;
+  margin: 0.8rem;
+}
+
+.btn {
+  padding: 0.6rem;
+  background-color: #8990ec;
+  color: #353959;
+  border-radius: 1.6rem;
+  border: 1px solid #353959;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #696fb8;
+}
+
+#bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.total {
+  font-size: 2.4rem;
+  margin: 0.5rem;
+}
+
+#current-currency-sign {
+  font-size: 1.6rem;
+}
+
+.percent-sign {
+  font-size: 1.6rem;
+}
