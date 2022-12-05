@@ -60,7 +60,7 @@ const calculateBill = () => {
 
   const perPersonTotal = total / numberOfPeople;
 
-  perPersonTotalDiv.innerText = `${perPersonTotal.toFixed(2)}`;
+  perPersonTotalDiv.innerText = `${perPersonTotal.toLocaleString("en-US")}`;
 };
 
 const increasePeople = () => {
@@ -70,11 +70,9 @@ const increasePeople = () => {
 };
 
 const decreasePeople = () => {
-  if (numberOfPeople >= 2) {
-    numberOfPeople--;
-    numberOfPeopleDiv.innerText = numberOfPeople;
-    calculateBill();
-  } else {
-    numberOfPeople = 1;
+  if (numberOfPeople <= 1) {
+    return;
   }
+  numberOfPeople -= 1;
+  numberOfPeopleDiv.innerText = numberOfPeople;
 };
